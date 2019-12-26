@@ -20,4 +20,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter:2.2.0.RELEASE")
     compile(kotlin("stdlib-jdk8"))
     compile(kotlin("reflect"))
+
+//    compile(project(":rest"))
+    compile(project(":graphql"))
 }

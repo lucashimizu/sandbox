@@ -1,2 +1,4 @@
 rootProject.name = 'sandbox'
 include 'application'
+//include 'rest'
+include 'graphql'
