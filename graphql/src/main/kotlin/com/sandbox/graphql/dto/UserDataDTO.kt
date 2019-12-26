@@ -1,6 +1,6 @@
 package com.sandbox.graphql.dto
 
-import com.sandbox.domain.UserData
+import com.sandbox.domain.data.UserData
 
 class UserDataDTO(val name: String, val email: String?, val pass: String) {
     companion object {

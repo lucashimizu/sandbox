@@ -1,4 +1,4 @@
-package com.sandbox.domain
+package com.sandbox.domain.data
 
 data class UserData (
     val name: String,
