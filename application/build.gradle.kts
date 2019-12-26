@@ -22,4 +22,6 @@ dependencies {
 
 //    compile(project(":rest"))
     compile(project(":graphql"))
+
+    compile(project(":persistence"))
 }
