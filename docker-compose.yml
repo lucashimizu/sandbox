@@ -1,0 +1,17 @@
+version: '3.2'
+services:
+  sandbox-db-service:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - "POSTGRES_USER=sandbox-db-user"
+      - "POSTGRES_PASSWORD=sandbox-db-pass"
+      - "POSTGRES_DB=sandbox-db"
+
+  sandbox-service:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - sandbox-db-service
