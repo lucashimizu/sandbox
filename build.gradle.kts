@@ -1,3 +1,5 @@
+//TODO: Extract common versions to variables
+
 plugins {
     // Makes Kotlin to target the JVM
     // id("org.jetbrains.kotlin.jvm") version "1.3.50" apply false
