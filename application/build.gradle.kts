@@ -24,4 +24,6 @@ dependencies {
     compile(project(":graphql"))
 
     compile(project(":persistence"))
+
+    compile("org.springframework.boot:spring-boot-starter:2.2.0.RELEASE")
 }

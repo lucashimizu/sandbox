@@ -35,7 +35,7 @@ subprojects {
     dependencies {
         "compile"(kotlin("stdlib-jdk8"))
         "compile"(kotlin("reflect"))
-        "compile"("org.springframework.boot:spring-boot-starter:2.2.0.RELEASE")
+        "compile"("org.springframework:spring-context:5.2.0.RELEASE")
 
         "testCompile"("junit:junit:4.+")
         "testCompile"("org.mockito:mockito-core:2.8.47")
