@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service
 @Service
 class UserServiceImpl : UserService {
     override fun getUser() = UserData(
+        null,
         name = "Test",
         password = "123"
     )
