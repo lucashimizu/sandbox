@@ -16,5 +16,7 @@ class UserRepository(private val crudRepository: UserCrudRepository) : UserDAO {
 
     override fun findById(id: UUID) = crudRepository.findByIdOrNull(id)?.toUserData()
 
+    override fun findAllByName(name: String) = crudRepository.findByNameContaining(name).map { it.toUserData() }
+
     override fun findByName(name: String) = crudRepository.findAllByName(name).map { it.toUserData() }
 }

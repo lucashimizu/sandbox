@@ -7,5 +7,6 @@ import java.util.UUID
 
 @Repository
 interface UserCrudRepository : CrudRepository<Users, UUID> {
-    fun findAllByName(name: String) : List<Users>
+    fun findAllByName(name: String): List<Users>
+    fun findByNameContaining(name: String): List<Users>
 }

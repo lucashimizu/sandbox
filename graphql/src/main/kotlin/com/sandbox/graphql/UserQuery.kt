@@ -12,11 +12,12 @@ class UserQuery(private val userService: UserService) {
         val log: Logger = LoggerFactory.getLogger(UserQuery::class.java)
     }
 
-    fun getUser() : UserDataDTO {
+    fun user() : List<UserDataDTO> {
         log.info("Getting user")
-        return UserDataDTO.fromDomain(userService.getUser())
+        return UserDataDTO.fromDomain(userService.searchUsersByName("Lucas"))
     }
-    fun getMetadata() : String {
+
+    fun metadata() : String {
         log.info("Getting metadata")
         return "Metadata"
     }

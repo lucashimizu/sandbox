@@ -7,5 +7,6 @@ interface UserDAO {
     fun save(userData: UserData) : UUID
     fun findAll() : List<UserData>
     fun findById(id: UUID) : UserData?
+    fun findAllByName(name: String) : List<UserData>
     fun findByName(name: String) : List<UserData>
 }
