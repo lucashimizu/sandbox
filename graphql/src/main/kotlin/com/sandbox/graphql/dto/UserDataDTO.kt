@@ -7,7 +7,7 @@ class UserDataDTO(val id: String?, val name: String, val email: String?, val pas
         fun fromDomain(userData: UserData) = UserDataDTO(
             id = userData.id?.toString(),
             name = userData.name,
-            email = null,
+            email = userData.email,
             pass = userData.password
         )
 

@@ -12,7 +12,13 @@ data class Users(
     val id: UUID = UUID.randomUUID(),
 
     @Column(nullable = false)
-    var name: String = ""
+    var name: String = "",
+
+    @Column(nullable = false)
+    var email: String = "",
+
+    @Column(nullable = false)
+    var pass: String = ""
 ) {
-    fun toUserData() = UserData(id = this.id, name = this.name, password = "")
+    fun toUserData() = UserData(id = this.id, name = this.name, email = this.email, password = this.pass)
 }
