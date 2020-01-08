@@ -10,7 +10,8 @@ import java.util.UUID
 
 @Repository
 class UserRepository(private val crudRepository: UserCrudRepository) : UserDAO {
-    override fun save(userData: UserData) = crudRepository.save(Users(name = userData.name)).id
+    override fun save(userData: UserData) =
+        crudRepository.save(Users(name = userData.name, email = userData.email, pass = userData.password)).id
 
     override fun findAll() = crudRepository.findAll().map { it.toUserData() }
 
