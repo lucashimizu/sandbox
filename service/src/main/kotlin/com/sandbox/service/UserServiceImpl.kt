@@ -8,7 +8,8 @@ import java.util.*
 
 @Service
 class UserServiceImpl(private val userDAO: UserDAO) : UserService {
-    override fun saveUser(name: String, email: String, pass: String) = userDAO.save(UserData(null, name, pass))
+    override fun saveUser(name: String, email: String, pass: String) =
+        userDAO.save(UserData(null, name, pass, email))
 
     override fun searchUsersByName(name: String) = userDAO.findAllByName(name)
 
